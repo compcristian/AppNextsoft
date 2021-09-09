@@ -7,15 +7,17 @@ using Nextsoft.Models;
 
 namespace Nextsoft.Data
 {
-    public class NextsoftContext : DbContext
-    {
-        public NextsoftContext (DbContextOptions<NextsoftContext> options)
-            : base(options)
-        {
-        }
+	public class NextsoftContext : DbContext
+	{
 
-        public DbSet<Nextsoft.Models.Cliente> Cliente { get; set; }
+		public NextsoftContext(DbContextOptions<NextsoftContext> options)
+				: base(options)
+		{
+		}
+		public DbSet<Nextsoft.Models.Cliente> Cliente { get; set; }
 
-        public DbSet<Nextsoft.Models.Endereco> Endereco { get; set; }
-    }
+		public DbSet<Nextsoft.Models.Endereco> Endereco { get; set; }
+
+		
+	}
 }

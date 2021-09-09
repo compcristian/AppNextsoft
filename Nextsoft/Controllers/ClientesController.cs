@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nextsoft.Data;
 using Nextsoft.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Nextsoft.Controllers
 {
-    public class ClientesController : Controller
+	public class ClientesController : Controller
     {
         private readonly NextsoftContext _context;
 
@@ -49,9 +46,6 @@ namespace Nextsoft.Controllers
             return View();
         }
 
-        // POST: Clientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CPF,Nome,Email")] Cliente cliente)

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nextsoft.Data;
 using Nextsoft.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Nextsoft.Controllers
 {
-    public class EnderecoesController : Controller
+	public class EnderecoesController : Controller
     {
         private readonly NextsoftContext _context;
 
@@ -49,9 +46,6 @@ namespace Nextsoft.Controllers
             return View();
         }
 
-        // POST: Enderecoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Logradouro,Numero,Complemento,Bairro,Cidade,Tipo,Estado")] Endereco endereco)
@@ -81,9 +75,7 @@ namespace Nextsoft.Controllers
             return View(endereco);
         }
 
-        // POST: Enderecoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Logradouro,Numero,Complemento,Bairro,Cidade,Tipo,Estado")] Endereco endereco)

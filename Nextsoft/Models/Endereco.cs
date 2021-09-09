@@ -23,5 +23,7 @@ namespace Nextsoft.Models
 		public string Tipo { get; set; }
 		[Display(Name = "Estado")]
 		public string Estado { get; set; }
+
+		//public int ClienteId { get; set; }
 	}
 }
